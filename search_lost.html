@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hajj-Luggage</title>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#0c4522">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="194x194">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Play|Titillium+Web|Lobster|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css'>
+
+  <link href="assets/style.css" rel="stylesheet">
+  <link rel="manifest" href="assets/manifest.json">
+
+</head>
+<body class="f-ubundu">
+<nav class="navbar fixed-top navbar-light bg-green">
+
+  
+  <div class="col-3"><a class="navbar-brand text-white" href="service.html">
+        <i class="fas fa-arrow-left"></i></a></div>
+     <div class="col-6">
+      <h6 class="mb-0 text-center text-white">Search Lost-Found</h6>
+    </div>
+    <div class="col-3 text-right"><a class="ml-auto" href="home.html"><img src="assets/images/Icon-36.png" class="navbar-brand text-white mr-0" style="height: 40px;width: 36px"></a></div>
+</nav>
+<div class="container-fluid mt-5">
+   <div class="row"> 
+   <div class="col-sm col-md col-lg col-xl"></div> 
+   <div class="card crd_h col-sm-8 col-md-6 col-lg-4 col-xl-4">
+      <div class="card-body search_lt">
+        <form action="/action_page.php">
+            <div class="form-group">
+              <label for="condtn"><b>Select a Type :-</b></label>
+                <select class="form-control" id="condtn" name="condtn" required>
+                    <option value="">Select a Condition</option>
+                    <option value="wn">Search for Found</option>
+                    <option value="wm">Search for Lost</option>
+                </select>
+            </div>
+            <div class="form-group autocomplete">
+              <label for="mob"><b>Search :-</b></label>
+              <input id="myInput" type="text" name="myCountry" placeholder="Search" required>
+            </div>
+            <div class="form-group">
+                  <label><b>Mobile No</b></label>
+                    <div class="input-group">
+                        <input id="phone" type="tel" class="form-control rounded-0 w-100">
+                    </div>
+            </div>
+            <div class="form-group">
+              <label for="mob"><b>Comments :-</b></label>
+              <textarea type="number" class="form-control" id="com" name="com" placeholder="Message" required></textarea>
+            </div> 
+            
+            <center><button type="submit" class="btn btn-primary btn-block mt-5">Reply</button></center>
+          </form>
+      </div>
+    </div>
+    <div class="col-sm col-md col-lg col-xl"></div> 
+    </div>
+</div>
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#searchlost">
+  Open modal
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="searchlost">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form action="/action_page.php">
+            <div class="form-group">
+              <label for="condtn"><b>Name :-</b></label>
+                <input id="name" class="form-control" type="text" name="name" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group autocomplete">
+              <label for="mob"><b>Location :-</b></label>
+              <input id="location" class="form-control" type="text" name="location" placeholder="Enter your Location" required>
+            </div>
+            <div class="form-group">
+              <label for="mob"><b>Mobile Number :-</b></label>
+              <input type="number" class="form-control" id="mob" placeholder="Enter Your Mobile Number" name="mob" required>
+            </div>
+            <!-- 
+            <div class="form-group">
+              <label for="mob"><b>Comments :-</b></label>
+              <textarea type="number" class="form-control" id="com" name="com" placeholder="Enter your Message" required></textarea>
+            </div> -->
+            
+            <center><button type="submit" class="btn btn-primary btn-block mt-5">Submit</button></center>
+          </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Wallet-arun","Mobile-arpit","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js'></script>
+<script>
+   let telInput = $("#phone")
+
+// initialize
+telInput.intlTelInput({
+    initialCountry: 'auto',
+    preferredCountries: ['us','gb','br','ru','cn','es','it'],
+    autoPlaceholder: 'aggressive',
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/utils.js",
+    geoIpLookup: function(callback) {
+        fetch('https://ipinfo.io/json', {
+            cache: 'reload'
+        }).then(response => {
+            if ( response.ok ) {
+                 return response.json()
+            }
+            throw new Error('Failed: ' + response.status)
+        }).then(ipjson => {
+            callback(ipjson.country)
+        }).catch(e => {
+            callback('us')
+        })
+    }
+})
+
+let telInput2 = $("#phone2")
+
+// initialize
+telInput2.intlTelInput({
+    initialCountry: 'br',
+    preferredCountries: ['us','gb','br','ru','cn','es','it'],
+    autoPlaceholder: 'aggressive',
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/utils.js"
+})
+</script>
+</body>
+</html>

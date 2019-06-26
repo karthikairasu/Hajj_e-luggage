@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hajj-Luggage</title>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#0c4522">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="194x194">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Play|Titillium+Web|Lobster|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="assets/style.css" rel="stylesheet">
+  <link rel="manifest" href="assets/manifest.json">
+<body class="f-ubundu" onload="locate()">
+<!-----------side nav start--------->  
+<div id="mySidenav" class="sidenav f-ubundu">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!--------profile open--------->
+      <div class="text-center text-light">
+          <h6 class="text-13 pt-1"></h6>
+          <h6 class="text-13"></h6>
+      </div><!--------profile close--------->
+      <!-------- Account Menus open--------->
+      <ul class="nav nav-tabs flex-column text-dark side-mu">
+          <li class="nav-item">
+             <a class="nav-link py-3" href="login.html"><i class="fas fa-sign-in-alt text-danger"></i>&nbsp;&nbsp; login</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link py-3" href="Signup.html"><i class="fas fa-user-plus text-danger"></i>&nbsp;&nbsp; Sign Up</a>
+          </li>
+      </ul>
+      <!--------Account Menus close--------->
+      <footer class="text-white side-ft">Version 1.2.0</footer>
+  </div>
+  <!--------Side nav close--------->  
+
+<nav class="navbar fixed-top navbar-light bg-green">
+  
+  <a class="navbar-brand" href="#" data-toggle="collapse" data-target="#collapsibleNavbar" onclick="openNav()">
+        <i class="fas fa-sliders-h text-light p-1 border border-secondary"></i></a>
+  <a class="ml-auto" href="home.html"><img src="assets/images/Icon-36.png" class="navbar-brand text-white" style="height: 40px;width: 36px"></a>
+</nav>
+<!-------------main nav close----------------->
+
+<div class="container-fluid mt-5 pt-3">
+
+    <div class="card sd p-1 mb-2">
+      <details>
+        <summary>
+            <span class="text-capitalize text-18"> Arun kumar, </span>
+            <span class="text-secondary text-12">
+            <i class="fas fa-phone-volume"></i> 8775678998, </span>
+            <span class="text-secondary text-12">Your Mobile is I'm getting well come and take.</span> 
+        </summary>
+        <p><form action="#">
+            <div class="form-group">
+              <label for="condtn"><b>Name :-</b></label>
+                <input id="name" class="form-control" type="text" name="name" placeholder="Arun" readonly>
+            </div>
+            <div class="form-group autocomplete">
+              <label for="mob"><b>Location :-</b></label>
+              <input id="location" class="form-control" type="text" name="location" placeholder="Marathahali" readonly>
+            </div>
+            <div class="form-group">
+              <label for="mob"><b>Mobile Number :-</b></label>
+              <input type="number" class="form-control" id="mob" placeholder="9878978678" name="mob" readonly>
+            </div>
+            <div class="form-group">
+              <label for="mob"><b>Comments :-</b></label>
+              <textarea type="number" class="form-control" id="com" name="com" placeholder="Your Mobile is I'm getting well come and take" readonly></textarea>
+            </div>
+          </form></p>
+      </details>
+    </div>
+
+    <div class="card sd p-1 mb-2">
+      <details>
+        <summary>
+            <span class="text-capitalize text-18"> Ramesh, </span>
+            <span class="text-secondary text-12">
+            <i class="fas fa-phone-volume"></i> 8775678998, </span>
+            <span class="text-secondary text-12">Your Mobile is I'm getting well come and take.</span> 
+        </summary>
+        <p><form action="#">
+            <div class="form-group">
+              <label for="condtn"><b>Name :-</b></label>
+                <input id="name" class="form-control" type="text" name="name" placeholder="Arun" readonly>
+            </div>
+            <div class="form-group autocomplete">
+              <label for="mob"><b>Location :-</b></label>
+              <input id="location" class="form-control" type="text" name="location" placeholder="Marathahali" readonly>
+            </div>
+            <div class="form-group">
+              <label for="mob"><b>Mobile Number :-</b></label>
+              <input type="number" class="form-control" id="mob" placeholder="9878978678" name="mob" readonly>
+            </div>
+            <div class="form-group">
+              <label for="mob"><b>Comments :-</b></label>
+              <textarea type="number" class="form-control" id="com" name="com" placeholder="Your Mobile is I'm getting well come and take" readonly></textarea>
+            </div>
+          </form></p>
+      </details>
+    </div>
+
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>
