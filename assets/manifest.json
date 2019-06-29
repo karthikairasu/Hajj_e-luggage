@@ -26,7 +26,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }],
-  "start_url": "https://karthikairasu.github.io/Hajj_e-luggage/home.html",
+  "start_url": "C:/xampp/htdocs/ansara/Hajj-luggage/home.html",
   "display": "standalone",
   "background_color": "#0c4522",
   "theme_color": "#0c4522"

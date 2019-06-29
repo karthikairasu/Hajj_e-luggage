@@ -31,21 +31,45 @@
   </div>
 </nav>
 <div class="container-fluid mt-5">
-   <div class="row"> 
+
+   <div class="row">
    <div class="col-sm col-md col-lg col-xl"></div> 
-   <div class="card crd_h col-sm-8 col-md-6 col-lg-4 col-xl-4">
-      <div class="card-body">
-        <a href="searchlist.html" class="btn btn-primary btn-lg btn-block mb-4">Prayer Time</a>
-        <a href="#" class="btn btn-primary btn-lg btn-block mb-4">Prayers & FATWA</a>
-        <a href="nearby_location.html" class="btn btn-primary btn-lg btn-block mb-4">Nearby Location</a>
-        <a href="report_lost.html" class="btn btn-primary btn-lg btn-block mb-4">Report Lost</a>
-        <a href="sos.html" class="btn btn-primary btn-lg btn-block mb-3">SOS</a>
-        <a href="search_lost.html" class="btn btn-primary btn-lg btn-block mb-4">Search Lost</a>
-        <a href="#" class="btn btn-primary btn-lg btn-block mb-4">Shopping Malls</a>
+   <div class="card crd_h col-sm-8 col-md-6 col-lg-4 col-xl-4"> 
+      <div class="card-body p-0">
+         <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Product</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.location='searchlist_details.html';">
+                <td>1</td>
+                <td>John</td>
+                <td>Mobile</td>
+                <td><img src="assets/images/Mobile.png" width="30px" height="30px"></td>
+              </tr>
+              <tr onclick="window.location='searchlist_details.html';">
+                <td>2</td>
+                <td>Ravi</td>
+                <td>wallet</td>
+                <td><img src="assets/images/wallet.png" width="30px" height="30px"></td>
+              </tr onclick="window.location='searchlist_details.html';">
+              <tr>
+                <td>3</td>
+                <td>Dinesh</td>
+                <td>card</td>
+                <td><img src="assets/images/mastercard.png" width="30px" height="30px"></td>
+              </tr>
+            </tbody>
+          </table>
       </div>
-    </div>
+    </div> 
     <div class="col-sm col-md col-lg col-xl"></div> 
-    </div>
+  </div>
 </div>
 
 </body>
